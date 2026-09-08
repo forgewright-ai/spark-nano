@@ -136,6 +136,10 @@ def main():
                "PATH": bindir + ":" + os.environ.get("PATH", "/usr/bin:/bin"),
                "LANG": "C.UTF-8", "LC_ALL": "C.UTF-8", "STUB_LOG": log}
         argv = [nano, "note.txt"]
+        if os.geteuid() == 0:
+            # root does not read ~/.nanorc (the Arch CI container runs the
+            # test as root): hand it the same file explicitly
+            argv = [nano, "--rcfile", os.path.join(tmp, ".nanorc"), "note.txt"]
 
         def logged():
             try:
