@@ -1,0 +1,19 @@
+# spark in nano -- your own AI, on your own machine (spark.forgewright.ai).
+# nano's `include` reads only syntax files, so append these lines to your
+# own ~/.nanorc:
+#
+#     cat ~/.config/nano/spark/spark.nanorc >> ~/.nanorc
+#
+#   M-S  the execute prompt opens pre-filled with `|spark edit `; type
+#        your words ("shorter", "fix grammar", "? is this clear"), press
+#        Enter -- the whole buffer, or the marked region (M-A marks), is
+#        piped through spark and replaced by the answer; M-U undoes
+#   M-F  fix spelling and punctuation, one keystroke, same pipe
+#
+# An ask (`? words`) answers through the same pipe: the answer replaces
+# the text -- read it, then M-U brings your text back. Nothing runs until
+# you press Enter; nothing leaves this machine but the piped text, to the
+# brain spark is configured for -- nano's pipe carries no file name, so
+# not even that. Needs GNU nano 5.4 or newer and spark 1.7 or newer.
+bind M-S "{execute}|spark edit " main
+bind M-F "{execute}|spark edit fix spelling and punctuation{enter}" main
