@@ -32,7 +32,7 @@ The append is the install: nano's `include` reads only syntax files, so a
 bind cannot ride it. An update is `git -C ~/.config/nano/spark pull`, then
 delete the old spark lines from `~/.nanorc` and append again. The comment
 block in `spark.nanorc` is the help; M-S and M-F are suggestions -- edit
-the two lines to taste.
+the two lines to taste. The keys, and what to ask: `CHEATSHEET.md`.
 
 ## What leaves this machine
 
