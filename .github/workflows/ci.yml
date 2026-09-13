@@ -21,7 +21,7 @@ jobs:
       - name: ascii docs
         run: |
           tab=$(printf '\t')
-          for f in README.md CHANGELOG.md CREDITS.md LICENSE spark.nanorc; do
+          for f in README.md CHANGELOG.md CHEATSHEET.md CREDITS.md LICENSE spark.nanorc; do
             ! LC_ALL=C grep -n "[^ -~${tab}]" "$f"; done
       - name: nano
         run: sudo apt-get install -y -qq nano >/dev/null && nano --version | head -1
