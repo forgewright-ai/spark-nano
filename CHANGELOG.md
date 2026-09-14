@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1
+
+- The cheatsheet says where a summary belongs: the ask form. Bare
+  words replace the text (undo brings it back) -- these plugins
+  cannot intercept a summary-shaped result the way the full plugins
+  now do, so the road sign stands in the docs.
+
 ## 1.0.0
 
 - spark in nano, the first prompt-shaped plugin: nano has no scripting,

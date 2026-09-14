@@ -54,6 +54,9 @@ By example
     M-S translate to Portuguese   the same text, in Portuguese
     M-S ? is the title too long   read the answer, then M-U
     M-F                           the one-keystroke cleanup
+    a summary?     M-S ? summarize this -- the ASK form: read the
+                   answer, M-U brings your text back. Bare words
+                   REPLACE the text (M-U undoes).
 
 The comment block in `spark.nanorc` is the help; M-S and M-F are
 suggestions -- edit the two bind lines to taste.
